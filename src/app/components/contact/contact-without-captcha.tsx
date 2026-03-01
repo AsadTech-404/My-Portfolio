@@ -8,14 +8,6 @@ import { isValidEmail } from "@/../utils/check-email";
 import { User, Mail, MessageSquare } from "lucide-react";
 
 const ContactWithoutCaptcha = () => {
-  const [mounted, setMounted] = useState(false);
-
-React.useEffect(() => {
-  setMounted(true);
-}, []);
-
-if (!mounted) return null;
-
   const [input, setInput] = useState({
     name: "",
     email: "",
@@ -46,14 +38,14 @@ if (!mounted) return null;
 
     const serviceID = process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID ?? "";
     const templateID = process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID ?? "";
-    const options = {
-      publicKey: process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY ?? "",
-    };
+    const publickey = process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY ?? "";
 
     const templateParams = {
-      from_name: input.name,
+      name: input.name,
       email: input.email,
-      message: `${input.message} \nEmail: ${input.email}`,
+      message: input.message,
+      title: "Website Contact",
+      time: new Date().toLocaleString(),
     };
 
     try {
@@ -62,7 +54,7 @@ if (!mounted) return null;
         serviceID,
         templateID,
         templateParams,
-        options,
+        publickey,
       );
 
       if (res.status === 200) {
