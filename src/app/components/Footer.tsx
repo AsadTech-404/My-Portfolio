@@ -90,13 +90,13 @@ const Footer = () => (
             >
               <FaLinkedin size={20} />
             </Link>
-            <Link
+            {/* <Link
               href={personalData.twitter}
               target="_blank"
               className="p-2 rounded-lg bg-white/5 hover:bg-red-500/10 hover:text-red-500 transition-all border border-white/5"
             >
               <FaTwitter size={20} />
-            </Link>
+            </Link> */}
             <Link
               href={personalData.Instagram}
               target="_blank"

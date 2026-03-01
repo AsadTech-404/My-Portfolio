@@ -8,6 +8,14 @@ import { isValidEmail } from "@/../utils/check-email";
 import { User, Mail, MessageSquare } from "lucide-react";
 
 const ContactWithoutCaptcha = () => {
+  const [mounted, setMounted] = useState(false);
+
+React.useEffect(() => {
+  setMounted(true);
+}, []);
+
+if (!mounted) return null;
+
   const [input, setInput] = useState({
     name: "",
     email: "",

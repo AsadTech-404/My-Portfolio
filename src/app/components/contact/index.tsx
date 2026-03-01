@@ -145,16 +145,16 @@ function ContactSection() {
                       icon: BiLogoLinkedin,
                       color: "#0077b5",
                     },
-                    {
-                      href: personalData.twitter,
-                      icon: FaXTwitter,
-                      color: "#1da1f2",
-                    },
-                    {
-                      href: personalData.stackOverflow,
-                      icon: FaStackOverflow,
-                      color: "#f48024",
-                    },
+                    // {
+                    //   href: personalData.twitter,
+                    //   icon: FaXTwitter,
+                    //   color: "#1da1f2",
+                    // },
+                    // {
+                    //   href: personalData.stackOverflow,
+                    //   icon: FaStackOverflow,
+                    //   color: "#f48024",
+                    // },
                     {
                       href: personalData.facebook,
                       icon: FaFacebook,

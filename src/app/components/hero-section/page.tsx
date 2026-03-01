@@ -158,20 +158,7 @@ const HeroSection = () => {
               >
                 <BsLinkedin size={24} />
               </Link>
-              <Link
-                href={personalData.leetcode}
-                target="_blank"
-                className="social-icon p-3 rounded-xl bg-white/5 border border-white/10 text-white hover:text-red-500 hover:border-red-500/50 transition-all duration-300 shadow-xl"
-              >
-                <SiLeetcode size={24} />
-              </Link>
-              <Link
-                href={personalData.twitter}
-                target="_blank"
-                className="social-icon p-3 rounded-xl bg-white/5 border border-white/10 text-white hover:text-red-500 hover:border-red-500/50 transition-all duration-300 shadow-xl"
-              >
-                <FaTwitterSquare size={24} />
-              </Link>
+              
             </div>
 
             <div className="hero-cta flex flex-wrap gap-4">
